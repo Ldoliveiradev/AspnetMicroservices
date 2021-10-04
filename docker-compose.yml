@@ -1,8 +1,14 @@
 version: '3.4'
 
 services:
-  aspnetmicroservices.catalog.api:
+  catalogdb:
+    image: mongo
+
+  catalog.api:
     image: ${DOCKER_REGISTRY-}aspnetmicroservicescatalogapi
     build:
       context: .
       dockerfile: src/services/AspnetMicroservices.Catalog.API/Dockerfile
+
+volumes:
+  mongo_data:
