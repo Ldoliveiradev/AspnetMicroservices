@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  aspnetmicroservices.catalog.api:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicescatalogapi
+    build:
+      context: .
+      dockerfile: src/services/AspnetMicroservices.Catalog.API/Dockerfile
