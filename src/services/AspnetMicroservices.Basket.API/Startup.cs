@@ -1,3 +1,4 @@
+using AspnetMicroservices.Basket.API.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +23,8 @@ namespace AspnetMicroservices.Basket.API
             {
                 options.Configuration = Configuration.GetValue<string>("CacheSettings:ConnectionString");
             });
+
+            services.AddScoped<IBasketRepository, BasketRepository>();
 
             services.AddControllers();
 
