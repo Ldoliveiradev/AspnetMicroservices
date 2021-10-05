@@ -20,6 +20,11 @@ namespace AspnetMicroservices.Basket.API.Entities
             }
         }
 
+        public ShoppingCart()
+        {
+
+        }
+
         public ShoppingCart(string userName)
         {
             UserName = userName;
