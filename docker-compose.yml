@@ -28,6 +28,12 @@ services:
       context: .
       dockerfile: src/services/AspnetMicroservices.Basket.API/Dockerfile
 
+  discount.api:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicesdiscountapi
+    build:
+      context: .
+      dockerfile: src/services/AspnetMicroservices.Discount.API/Dockerfile
+
 volumes:
   mongo_data:
   portainer_data:
