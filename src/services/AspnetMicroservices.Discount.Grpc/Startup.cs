@@ -27,7 +27,7 @@ namespace AspnetMicroservices.Discount.Grpc
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapGrpcService<GreeterService>();
+                //endpoints.MapGrpcService<DiscountProtoService>();
 
                 endpoints.MapGet("/", async context =>
                 {
