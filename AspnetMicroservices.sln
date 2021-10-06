@@ -7,9 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{71AFEEFB-4953-48F1-9D09-E928FCF9C138}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.Catalog.API", "src\services\AspnetMicroservices.Catalog.API\AspnetMicroservices.Catalog.API.csproj", "{7EF9EC8C-6B29-4537-AC25-DC609513241F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetMicroservices.Catalog.API", "src\services\AspnetMicroservices.Catalog.API\AspnetMicroservices.Catalog.API.csproj", "{7EF9EC8C-6B29-4537-AC25-DC609513241F}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6C22099F-142A-46BA-AD39-D07C4AFA10CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{867E548A-6063-4045-8540-426DC3A6296E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.Basket.API", "src\services\AspnetMicroservices.Basket.API\AspnetMicroservices.Basket.API.csproj", "{115A0908-A1C6-4215-9D1D-7E84BD211C5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,18 @@ Global
 		{6C22099F-142A-46BA-AD39-D07C4AFA10CA}.Release|x64.Build.0 = Release|Any CPU
 		{6C22099F-142A-46BA-AD39-D07C4AFA10CA}.Release|x86.ActiveCfg = Release|Any CPU
 		{6C22099F-142A-46BA-AD39-D07C4AFA10CA}.Release|x86.Build.0 = Release|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Debug|x64.Build.0 = Debug|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Debug|x86.Build.0 = Debug|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Release|x64.ActiveCfg = Release|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Release|x64.Build.0 = Release|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Release|x86.ActiveCfg = Release|Any CPU
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +68,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{71AFEEFB-4953-48F1-9D09-E928FCF9C138} = {C0B96AC3-7683-4F64-AE9A-356894677624}
 		{7EF9EC8C-6B29-4537-AC25-DC609513241F} = {71AFEEFB-4953-48F1-9D09-E928FCF9C138}
+		{867E548A-6063-4045-8540-426DC3A6296E} = {C0B96AC3-7683-4F64-AE9A-356894677624}
+		{115A0908-A1C6-4215-9D1D-7E84BD211C5B} = {867E548A-6063-4045-8540-426DC3A6296E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {06EF6C5C-631B-4315-BCC6-E2C6451AB8DF}
