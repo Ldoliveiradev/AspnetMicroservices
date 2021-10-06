@@ -1,4 +1,5 @@
 ﻿using AspnetMicroservices.Discount.Grpc.Repositories;
+using AspnetMicroservices.Discount.Grpc.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +13,8 @@ namespace AspnetMicroservices.Discount.Grpc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IDiscountRepository, DiscountRepository>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddGrpc();
         }
@@ -27,7 +30,7 @@ namespace AspnetMicroservices.Discount.Grpc
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapGrpcService<DiscountProtoService>();
+                endpoints.MapGrpcService<DiscountService>();
 
                 endpoints.MapGet("/", async context =>
                 {
