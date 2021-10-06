@@ -1,10 +1,13 @@
+using AspnetMicroservices.Basket.API.GrpcServices;
 using AspnetMicroservices.Basket.API.Repositories;
+using AspnetMicroservices.Discount.Grpc.Protos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System;
 
 namespace AspnetMicroservices.Basket.API
 {
@@ -25,6 +28,10 @@ namespace AspnetMicroservices.Basket.API
             });
 
             services.AddScoped<IBasketRepository, BasketRepository>();
+
+            services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(o => o.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
+
+            services.AddScoped<DiscountGrpcService>();
 
             services.AddControllers();
 
