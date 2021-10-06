@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{65
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.Discount.API", "src\services\AspnetMicroservices.Discount.API\AspnetMicroservices.Discount.API.csproj", "{97A72F95-0AC6-4D51-901E-3AAAA9BD07DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.Discount.Grpc", "src\services\AspnetMicroservices.Discount.Grpc\AspnetMicroservices.Discount.Grpc.csproj", "{D0B796F6-E938-4308-A3EC-1450548BDF82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,18 @@ Global
 		{97A72F95-0AC6-4D51-901E-3AAAA9BD07DA}.Release|x64.Build.0 = Release|Any CPU
 		{97A72F95-0AC6-4D51-901E-3AAAA9BD07DA}.Release|x86.ActiveCfg = Release|Any CPU
 		{97A72F95-0AC6-4D51-901E-3AAAA9BD07DA}.Release|x86.Build.0 = Release|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Debug|x64.Build.0 = Debug|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Debug|x86.Build.0 = Debug|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Release|x64.ActiveCfg = Release|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Release|x64.Build.0 = Release|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Release|x86.ActiveCfg = Release|Any CPU
+		{D0B796F6-E938-4308-A3EC-1450548BDF82}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +102,7 @@ Global
 		{115A0908-A1C6-4215-9D1D-7E84BD211C5B} = {867E548A-6063-4045-8540-426DC3A6296E}
 		{65828074-AF56-4A1F-9788-F3EBEA2D590E} = {C0B96AC3-7683-4F64-AE9A-356894677624}
 		{97A72F95-0AC6-4D51-901E-3AAAA9BD07DA} = {65828074-AF56-4A1F-9788-F3EBEA2D590E}
+		{D0B796F6-E938-4308-A3EC-1450548BDF82} = {65828074-AF56-4A1F-9788-F3EBEA2D590E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {06EF6C5C-631B-4315-BCC6-E2C6451AB8DF}
