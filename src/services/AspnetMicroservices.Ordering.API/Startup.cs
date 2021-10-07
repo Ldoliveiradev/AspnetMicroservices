@@ -1,4 +1,5 @@
 using AspnetMicroservices.Ordering.Application;
+using AspnetMicroservices.Ordering.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,7 @@ namespace AspnetMicroservices.Ordering.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplicationServices();
+            services.AddInfrastructureServices(Configuration);
 
             services.AddControllers();
 

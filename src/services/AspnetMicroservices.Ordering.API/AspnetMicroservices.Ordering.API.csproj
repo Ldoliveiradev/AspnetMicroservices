@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AspnetMicroservices.Ordering.Application\AspnetMicroservices.Ordering.Application.csproj" />
+    <ProjectReference Include="..\AspnetMicroservices.Ordering.Infrastructure\AspnetMicroservices.Ordering.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
