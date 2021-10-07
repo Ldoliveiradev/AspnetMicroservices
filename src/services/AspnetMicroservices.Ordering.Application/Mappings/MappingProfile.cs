@@ -1,4 +1,5 @@
-﻿using AspnetMicroservices.Ordering.Application.Features.Orders.Queries.GetOrdersList;
+﻿using AspnetMicroservices.Ordering.Application.Features.Orders.Commands.CheckoutOrder;
+using AspnetMicroservices.Ordering.Application.Features.Orders.Queries.GetOrdersList;
 using AspnetMicroservices.Ordering.Domain.Entities;
 using AutoMapper;
 
@@ -9,6 +10,7 @@ namespace AspnetMicroservices.Ordering.Application.Mappings
         public MappingProfile()
         {
             CreateMap<Order, OrdersViewModel>().ReverseMap();
+            CreateMap<Order, CheckoutOrderCommand>().ReverseMap();
         }
     }
 }
