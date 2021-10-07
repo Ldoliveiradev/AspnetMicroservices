@@ -5,14 +5,14 @@ using System.Linq;
 
 namespace AspnetMicroservices.Ordering.Application.Exceptions
 {
-    public class ValidationException : ApplicationException
+    public class ValidationsException : ApplicationException
     {
-        public ValidationException() : base("One or more validation failures have occurred.")
+        public ValidationsException() : base("One or more validation failures have occurred.")
         {
             Errors = new Dictionary<string, string[]>();
         }
 
-        public ValidationException(IEnumerable<ValidationFailure> failures) : this()
+        public ValidationsException(IEnumerable<ValidationFailure> failures) : this()
         {
             Errors = failures.GroupBy(e => e.PropertyName, e => e.ErrorMessage)
                 .ToDictionary(failureGroup => failureGroup.Key, failureGroup => failureGroup.ToArray());

@@ -29,8 +29,6 @@ namespace AspnetMicroservices.Ordering.Application.Features.Orders.Commands.Upda
 
             if (orderToUpdate == null)
             {
-                _logger.LogError("Order not exist on database.");
-
                 throw new NotFoundException(nameof(Order), request.Id);
             }
 
