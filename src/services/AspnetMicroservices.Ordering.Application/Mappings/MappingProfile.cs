@@ -1,13 +1,14 @@
-﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AspnetMicroservices.Ordering.Application.Features.Orders.Queries.GetOrdersList;
+using AspnetMicroservices.Ordering.Domain.Entities;
+using AutoMapper;
 
 namespace AspnetMicroservices.Ordering.Application.Mappings
 {
     public class MappingProfile : Profile
     {
+        public MappingProfile()
+        {
+            CreateMap<Order, OrdersViewModel>().ReverseMap();
+        }
     }
 }
