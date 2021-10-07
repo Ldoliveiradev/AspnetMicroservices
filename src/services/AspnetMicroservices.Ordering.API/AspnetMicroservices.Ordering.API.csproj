@@ -8,4 +8,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AspnetMicroservices.Ordering.Application\AspnetMicroservices.Ordering.Application.csproj" />
+  </ItemGroup>
+
 </Project>
