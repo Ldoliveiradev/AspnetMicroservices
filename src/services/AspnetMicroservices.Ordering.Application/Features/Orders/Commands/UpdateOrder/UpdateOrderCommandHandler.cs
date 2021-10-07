@@ -1,4 +1,5 @@
 ﻿using AspnetMicroservices.Ordering.Application.Contracts.Persistence;
+using AspnetMicroservices.Ordering.Application.Exceptions;
 using AspnetMicroservices.Ordering.Domain.Entities;
 using AutoMapper;
 using MediatR;
@@ -30,7 +31,7 @@ namespace AspnetMicroservices.Ordering.Application.Features.Orders.Commands.Upda
             {
                 _logger.LogError("Order not exist on database.");
 
-                //throw new NotFoundException(nameof(Order), request.Id);
+                throw new NotFoundException(nameof(Order), request.Id);
             }
 
             _mapper.Map(request, orderToUpdate, typeof(UpdateOrderCommand), typeof(Order));
