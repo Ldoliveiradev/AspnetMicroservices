@@ -23,13 +23,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetMicroservices.Discoun
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{7A71149F-8395-4E22-AD52-7D4C4C20435D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.Ordering.API", "src\services\AspnetMicroservices.Ordering.API\AspnetMicroservices.Ordering.API.csproj", "{87B0E083-A1DD-4F83-8937-48C73C1C7FF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetMicroservices.Ordering.API", "src\services\AspnetMicroservices.Ordering.API\AspnetMicroservices.Ordering.API.csproj", "{87B0E083-A1DD-4F83-8937-48C73C1C7FF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.Ordering.Domain", "src\services\AspnetMicroservices.Ordering.Domain\AspnetMicroservices.Ordering.Domain.csproj", "{7E12DF6D-30FA-450B-A175-BDD5114ED140}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetMicroservices.Ordering.Domain", "src\services\AspnetMicroservices.Ordering.Domain\AspnetMicroservices.Ordering.Domain.csproj", "{7E12DF6D-30FA-450B-A175-BDD5114ED140}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.Ordering.Application", "src\services\AspnetMicroservices.Ordering.Application\AspnetMicroservices.Ordering.Application.csproj", "{067FA714-EFC2-4174-8D13-F2230E5FA631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetMicroservices.Ordering.Application", "src\services\AspnetMicroservices.Ordering.Application\AspnetMicroservices.Ordering.Application.csproj", "{067FA714-EFC2-4174-8D13-F2230E5FA631}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.Ordering.Infrastructure", "src\services\AspnetMicroservices.Ordering.Infrastructure\AspnetMicroservices.Ordering.Infrastructure.csproj", "{B49E7078-DF1B-4922-B817-390DD3FC986D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetMicroservices.Ordering.Infrastructure", "src\services\AspnetMicroservices.Ordering.Infrastructure\AspnetMicroservices.Ordering.Infrastructure.csproj", "{B49E7078-DF1B-4922-B817-390DD3FC986D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{683CBA78-C08E-404A-98BE-9AC86CF7BC2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspnetMicroservices.EventBus.Messages", "src\buildingBlocks\AspnetMicroservices.EventBus.Messages\AspnetMicroservices.EventBus.Messages.csproj", "{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +153,18 @@ Global
 		{B49E7078-DF1B-4922-B817-390DD3FC986D}.Release|x64.Build.0 = Release|Any CPU
 		{B49E7078-DF1B-4922-B817-390DD3FC986D}.Release|x86.ActiveCfg = Release|Any CPU
 		{B49E7078-DF1B-4922-B817-390DD3FC986D}.Release|x86.Build.0 = Release|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Debug|x64.Build.0 = Debug|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Debug|x86.Build.0 = Debug|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Release|x64.ActiveCfg = Release|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Release|x64.Build.0 = Release|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -166,6 +182,7 @@ Global
 		{7E12DF6D-30FA-450B-A175-BDD5114ED140} = {7A71149F-8395-4E22-AD52-7D4C4C20435D}
 		{067FA714-EFC2-4174-8D13-F2230E5FA631} = {7A71149F-8395-4E22-AD52-7D4C4C20435D}
 		{B49E7078-DF1B-4922-B817-390DD3FC986D} = {7A71149F-8395-4E22-AD52-7D4C4C20435D}
+		{7DB6D9C0-33A3-41FF-A0EE-2C7E679F45B0} = {683CBA78-C08E-404A-98BE-9AC86CF7BC2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {06EF6C5C-631B-4315-BCC6-E2C6451AB8DF}

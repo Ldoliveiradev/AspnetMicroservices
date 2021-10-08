@@ -9,6 +9,7 @@ WORKDIR /src
 COPY ["src/services/AspnetMicroservices.Ordering.API/AspnetMicroservices.Ordering.API.csproj", "src/services/AspnetMicroservices.Ordering.API/"]
 COPY ["src/services/AspnetMicroservices.Ordering.Application/AspnetMicroservices.Ordering.Application.csproj", "src/services/AspnetMicroservices.Ordering.Application/"]
 COPY ["src/services/AspnetMicroservices.Ordering.Domain/AspnetMicroservices.Ordering.Domain.csproj", "src/services/AspnetMicroservices.Ordering.Domain/"]
+COPY ["src/buildingBlocks/AspnetMicroservices.EventBus.Messages/AspnetMicroservices.EventBus.Messages.csproj", "src/buildingBlocks/AspnetMicroservices.EventBus.Messages/"]
 COPY ["src/services/AspnetMicroservices.Ordering.Infrastructure/AspnetMicroservices.Ordering.Infrastructure.csproj", "src/services/AspnetMicroservices.Ordering.Infrastructure/"]
 RUN dotnet restore "src/services/AspnetMicroservices.Ordering.API/AspnetMicroservices.Ordering.API.csproj"
 COPY . .

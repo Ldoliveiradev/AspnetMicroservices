@@ -1,5 +1,8 @@
+using AspnetMicroservices.EventBus.Messages.Common;
+using AspnetMicroservices.Ordering.API.EventBusConsumer;
 using AspnetMicroservices.Ordering.Application;
 using AspnetMicroservices.Ordering.Infrastructure;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +25,27 @@ namespace AspnetMicroservices.Ordering.API
         {
             services.AddApplicationServices();
             services.AddInfrastructureServices(Configuration);
+
+            services.AddMassTransit(config =>
+            {
+                config.AddConsumer<BasketCheckoutConsumer>();
+
+                config.UsingRabbitMq((ctx, cfg) =>
+                {
+                    cfg.Host(Configuration["EventBusSettings:HostAddress"]);
+
+                    cfg.ReceiveEndpoint(EventBusConstants.BasketCheckoutQueue, c =>
+                    {
+                        c.ConfigureConsumer<BasketCheckoutConsumer>(ctx);
+                    });
+                });
+            });
+
+            services.AddMassTransitHostedService();
+
+            services.AddScoped<BasketCheckoutConsumer>();
+
+            services.AddAutoMapper(typeof(Startup));
 
             services.AddControllers();
 
