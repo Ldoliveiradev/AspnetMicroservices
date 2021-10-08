@@ -5,7 +5,6 @@ using AspnetMicroservices.EventBus.Messages.Events;
 using AutoMapper;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -20,12 +19,13 @@ namespace AspnetMicroservices.Basket.API.Controllers
         private readonly IMapper _mapper;
         private readonly IPublishEndpoint _publishEndpoint;
 
-        public BasketController(IBasketRepository repository, DiscountGrpcService discountGrpcService, IMapper mapper, IPublishEndpoint publishEndpoint)
+        public BasketController(IBasketRepository repository, DiscountGrpcService discountGrpcService, IMapper mapper,
+            IPublishEndpoint publishEndpoint)
         {
-            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
-            _discountGrpcService = discountGrpcService ?? throw new ArgumentNullException(nameof(discountGrpcService));
-            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
-            _publishEndpoint = publishEndpoint ?? throw new ArgumentNullException(nameof(publishEndpoint));
+            _repository = repository;
+            _discountGrpcService = discountGrpcService;
+            _mapper = mapper;
+            _publishEndpoint = publishEndpoint;
         }
 
         [HttpGet("{userName}", Name = "GetBasket")]
@@ -44,6 +44,7 @@ namespace AspnetMicroservices.Basket.API.Controllers
             foreach (var item in basket.Items)
             {
                 var coupon = await _discountGrpcService.GetDiscount(item.ProductName);
+
                 item.Price -= coupon.Amount;
             }
 
@@ -68,9 +69,7 @@ namespace AspnetMicroservices.Basket.API.Controllers
             var basket = await _repository.GetBasket(basketCheckout.UserName);
 
             if (basket == null)
-            {
                 return BadRequest();
-            }
 
             var eventMessage = _mapper.Map<BasketCheckoutEvent>(basketCheckout);
             eventMessage.TotalPrice = basket.TotalPrice;
