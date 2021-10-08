@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="7.2.2" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.2.2" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -17,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\buildingBlocks\AspnetMicroservices.EventBus.Messages\AspnetMicroservices.EventBus.Messages.csproj" />
     <ProjectReference Include="..\AspnetMicroservices.Ordering.Application\AspnetMicroservices.Ordering.Application.csproj" />
     <ProjectReference Include="..\AspnetMicroservices.Ordering.Infrastructure\AspnetMicroservices.Ordering.Infrastructure.csproj" />
   </ItemGroup>
