@@ -64,6 +64,12 @@ services:
       context: .
       dockerfile: src/apiGateways/AspnetMicroservices.Shopping.Aggregator/Dockerfile
 
+  aspnetrunbasics:
+    image: ${DOCKER_REGISTRY-}aspnetrunbasics
+    build:
+      context: .
+      dockerfile: src/webApps/AspnetRunBasics/Dockerfile
+
 volumes:
   mongo_data:
   portainer_data:
