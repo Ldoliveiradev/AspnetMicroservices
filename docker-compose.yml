@@ -1,0 +1,77 @@
+version: '3.4'
+
+services:
+  catalogdb:
+    image: mongo
+
+  basketdb:
+    image: redis:alpine
+
+  discountdb:
+    image: postgres
+
+  orderdb:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  pgadmin:
+    image: dpage/pgadmin4
+
+  portainer:
+    image: portainer/portainer-ce
+
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicescatalogapi
+    build:
+      context: .
+      dockerfile: src/services/AspnetMicroservices.Catalog.API/Dockerfile
+
+  basket.api:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicesbasketapi
+    build:
+      context: .
+      dockerfile: src/services/AspnetMicroservices.Basket.API/Dockerfile
+
+  discount.api:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicesdiscountapi
+    build:
+      context: .
+      dockerfile: src/services/AspnetMicroservices.Discount.API/Dockerfile
+
+  discount.grpc:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicesdiscountgrpc
+    build:
+      context: .
+      dockerfile: src/services/AspnetMicroservices.Discount.Grpc/Dockerfile
+
+  ordering.api:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicesorderingapi
+    build:
+      context: .
+      dockerfile: src/services/AspnetMicroservices.Ordering.API/Dockerfile
+
+  ocelotapigateway:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicesocelotapigateway
+    build:
+      context: .
+      dockerfile: src/apiGateways/AspnetMicroservices.OcelotApiGateway/Dockerfile
+
+  shopping.aggregator:
+    image: ${DOCKER_REGISTRY-}aspnetmicroservicesshoppingaggregator
+    build:
+      context: .
+      dockerfile: src/apiGateways/AspnetMicroservices.Shopping.Aggregator/Dockerfile
+
+  aspnetrunbasics:
+    image: ${DOCKER_REGISTRY-}aspnetrunbasics
+    build:
+      context: .
+      dockerfile: src/webApps/AspnetRunBasics/Dockerfile
+
+volumes:
+  mongo_data:
+  portainer_data:
+  postgres_data:
+  pgadmin_data:
