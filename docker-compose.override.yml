@@ -37,7 +37,7 @@ services:
       - "1434:1433"
 
   rabbitmq:
-    container_name: rabbitmq
+    container_name: rabbitmq-aspnet
     restart: always
     ports:
       - "5673:5672"
@@ -47,7 +47,7 @@ services:
     container_name: pgadmin
     environment:
       - PGADMIN_DEFAULT_EMAIL=ldosrj2010@gmail.com
-      - PGADMIN_DEFAULT_PASSWORD=Ldos1341989!
+      - PGADMIN_DEFAULT_PASSWORD=Password123!
     restart: always
     ports:
       - "5050:80"
